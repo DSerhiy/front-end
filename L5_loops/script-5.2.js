@@ -22,7 +22,7 @@ const userNum = prompt('Pls enter  a number, which to be used to log numbers mul
 if (userNum !== null && !Number.isNaN(Number(userNum)) && userNum !== '') {
   for (let counter = 0, index = 1; counter !== 10; index++) {
     if (index % Number(userNum) === 0) {
-      console.log(index);
+      console.log(index); 
       counter++;
     }
   }
