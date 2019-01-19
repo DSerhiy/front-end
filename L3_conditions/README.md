@@ -9,4 +9,6 @@ Write a questionnaire of hiring. Notify user about result.
 
 script-3.3.js
 --------------
-Write a script that ask user to guess what number system has generated
+Tell to user what currency is current in your system. Ask him to enter custom number and then convert it to your currency.
+
+Don't forget to notify user about the result!
