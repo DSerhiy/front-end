@@ -1,17 +1,16 @@
 (function () {
-  const arr = [1, 2, 3, 4, 5, 6];
 
-  forEach(arr, function (item, index) {
-    console.log(index, '=>', item);
+
+  var arr = [1, 2, 3, 4, 5]
+
+  // для каждого элемента массива запустить функцию,
+  // промежуточный результат передавать первым аргументом далее
+  var result = reduce(arr, function(sum, current) {
+    return sum + current;
   });
 
-  console.log(map(arr, function (item) {
-    return item * 2;
-  }));
-
-  console.log(filter(arr, function (item, index, arr) {
-    return item > 3;
-  }));
+  alert( result ); // 15
+  
 })();
 
 // ==============
@@ -45,7 +44,7 @@ function filter(arr, callback) {
     }
   }
 
-  return newArr
+  return newArr;
 }
 
 // ------------------------------
@@ -72,3 +71,11 @@ function some(arr, callback) {
 
 // -------------------------------
 
+function reduce(arr, callback, initialValue) {
+  let value = initialValue || 0;
+  for (let i = 0; i < arr.length; i++) {
+    value = callback(value, arr[i], i, arr);
+  }
+
+  return value;
+}

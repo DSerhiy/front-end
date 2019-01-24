@@ -5,6 +5,8 @@ Implementation of bild-in Array methods in own function:
 - Array.forEach(),
 - Array.map(),
 - Array.filter();
+- Array.every();
+- Array.some();
 
 script-7.2.js
 -------------
