@@ -69,15 +69,15 @@ function renderClock(element) {
 
 function getTime() {
   const date = new Date();
-  let hrs = `${date.getHours()}:`;
-  let mins = `${date.getMinutes()}:`;
+  let hrs = `${date.getHours()}`;
+  let mins = `${date.getMinutes()}`;
   let secs = `${date.getSeconds()}`;
 
-  hrs.length === 2 ? hrs = `0${hrs}` : hrs = hrs;
-  mins.length === 2 ? mins = `0${mins}` : mins = mins;
+  hrs.length === 1 ? hrs = `0${hrs}` : hrs = hrs;
+  mins.length === 1 ? mins = `0${mins}` : mins = mins;
   secs.length === 1 ? secs = `0${secs}` : secs = secs;
 
-  return hrs + mins + secs;
+  return `${hrs}:${mins}:${secs}`;
 };
 
 // ==================
