@@ -11,7 +11,7 @@ function Task(title, description, startDate, endDate) {
 }
 
 Task.prototype.isExpired = function(){
-  return this.end.getTime() <= Date.now() ? 1 : 0;
+  return this.end.getTime() <= Date.now() ? true : false;
 };
 
 (function () {
