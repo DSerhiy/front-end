@@ -47,9 +47,8 @@ Squad.prototype.isReadyToFight = function(damage) {
   })
 }
 
-Squad.prototype.restoreHealth = function(index) {
-  index = index || 0; 
-  if (index)
+Squad.prototype.restoreHealth = function(index = false) {
+  if (index === false)
     this.squad[index].restoreHealth();
   else 
     this.squad.forEach((resource) => {
@@ -57,9 +56,8 @@ Squad.prototype.restoreHealth = function(index) {
     })
 }
 
-Squad.prototype.restoreDistance = function(index) {
-  index = index || false; 
-  if (index)
+Squad.prototype.restoreDistance = function(index = false) {
+  if (index === false)
     this.squad[index].resotreDistance();
   else 
     this.squad.forEach((resource) => {
