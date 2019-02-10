@@ -37,13 +37,13 @@ Squad.prototype.addResource = function(type, health, maxHealth, distanceReserve,
 
 Squad.prototype.isReadyToMove = function(distance) {
   return this.squad.every((resource) => {
-    return resource.distanceReserve > distance; 
+    return resource.isReadyToMove(distance); 
   })
 }
 
 Squad.prototype.isReadyToFight = function(damage) {
   return this.squad.every((resource) => {
-    return resource.health > damage; 
+    return resource.isReadyToFight(damage); 
   })
 }
 
@@ -69,7 +69,7 @@ Squad.prototype.restoreDistance = function(index) {
  
 Squad.prototype.getReadyToMoveResources = function(distance) {
  return this.squad.filter((resource) => {
-    return resource.distanceReserve > distance;
+    return resource.isReadyToMove(distance);
   })
 }
 
@@ -90,10 +90,15 @@ Squad.prototype.cloneResource = function(resource) {
   return resource.clone();  
 }
 
-
 const newSquad = new Squad();
 
 newSquad.addResource('Horse', 100, 100, 250, 250);
 newSquad.addResource('Soldier', 100, 100, 70, 70);
 
 console.log(newSquad);
+
+console.log(newSquad.squad[0].isReadyToMove(100));
+console.log(newSquad.squad[1].isReadyToMove(100));
+console.log(newSquad.getReadyToMoveResources(100));
+console.log(newSquad.getReadyToMoveResources(100));
+console.log(newSquad.getReadyToMoveResources(100));
