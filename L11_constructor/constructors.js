@@ -4,8 +4,7 @@ function Company() {
 
 Company.prototype.addEmployee = function (emp) {
   if (emp instanceof Employee){
-      emp.level = new EmployeeLevel(
-      EmployeeLevel.levelList[random(0, EmployeeLevel.levelList.length)]);
+      emp.level = new EmployeeLevel(EmployeeLevel.levelList[random(0, EmployeeLevel.levelList.length)]);
       emp.salary = random(emp.level.minSalary, emp.level.maxSalary);
     this.stuff.push(emp);
   }    
@@ -14,9 +13,7 @@ Company.prototype.addEmployee = function (emp) {
 }
 
 Company.prototype.removeEmployee = function (emp) {
-  this.stuff.splice(this.stuff.findIndex(function (el) {
-    return el === emp;
-  }), 1);
+  this.stuff.find((el) = > ) 
 }
 
 Company.prototype.getAccountInfo = function () {
@@ -103,4 +100,11 @@ function UserCV (user) {
 
 function random(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
+}
+
+
+// =========================
+
+Employee.prototype.clone = function () {
+  return new Employee(this.id, this.name, this.surname, this.technology, this.start); 
 }
