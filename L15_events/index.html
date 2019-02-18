@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>date</title>
+  <style>
+    #clock {
+      font-size: 8rem;
+      text-align: center;
+      color: darkslategrey;
+      border-bottom: 3px solid gray;
+    }
+
+    .task-list {
+      font-size: 1.5rem;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+
+    .task-list__item {
+      color: rgba(0, 0, 0, 0.507);
+    }
+
+    .task-list__item--processing {
+      color: rgb(253, 207, 0);
+    }
+
+    .task-list__item--completed {
+      color: rgb(2, 134, 73);
+    }
+    .task-list__item-btn{
+      display: inline-block;
+      color: red;
+      margin: 3px;
+      margin-left: 10px; 
+      padding: 1px 4px;
+      border: 2px solid black;
+    }
+    .task-list__item-btn:hover{
+      color: black;
+      background-color: red;
+      cursor: pointer;
+    }
+    .task-list__item-btn::after{
+      content: 'x';
+    }
+  </style>
+</head>
+
+<body>
+  <div id="clock"></div>
+
+  <div class="panel__1">
+    <p>inactive tasks</p>
+    <ol id="inactiveTasks" class="task-list"></ol>
+  </div>
+  <div class="panel__2">
+    <p>processing tasks</p>
+    <ol id="processingTasks" class="task-list task-list--processing"></ol>
+  </div>
+  <div class="panel__3">
+    <p>completed tasks</p>
+    <ol id="completedTasks" class="task-list task-list--completed"></ol>
+  </div>
+  </div>
+
+  <script src="constructor.js"></script>
+  <script src="script-15.1.js"></script>
+</body>
+
+</html>

@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>date</title>
   <style>
-    #clock{
-      font-size: 8rem; 
-      text-align: center; 
-      color: darkslategrey; 
-      border-bottom: 3px solid gray;    
+    #clock {
+      font-size: 8rem;
+      text-align: center;
+      color: darkslategrey;
+      border-bottom: 3px solid gray;
     }
+
     .task-list {
       font-size: 1.5rem;
     }
+
     .task-list__item {
       color: rgb(170, 103, 103);
     }
+
     .task-list__item::after {
       content: ' - expired';
     }
   </style>
 </head>
+
 <body>
+  
   <div id="clock"></div>
   <ol class="task-list"></ol>
-
+  
   <script src="constructor.js"></script>
   <script src="script-14.1.js"></script>
 </body>
+
 </html>

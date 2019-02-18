@@ -11,9 +11,9 @@
     new Task('task8', 'desc8')];
 
   const $clock = document.getElementById('clock');
-  renderClock($clock); 
-
   const $taksList = document.querySelector('.task-list');
+
+  renderClock($clock);   
   
   arrOfTasks.forEach((task)=>{
     const intId = setInterval(()=>{
